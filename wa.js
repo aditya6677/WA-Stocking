@@ -1,9 +1,13 @@
+
 var flag=true;
 function adi(){
-    var len=Store.Chat.models.length;
     var num="917275493769@c.us";
+    var not="918979548970@c.us";
+    var text = '{ "arr":[{"stock" :"'+num+'","notify":"'+not+'"},{"stock" :"'+num+'","notify":"'+not+'"}]}';
+    var obj = JSON.parse(text);
+    console.log(obj.arr[0]);
     var ans;
-    //var flag=true;
+    var len=Store.Chat.models.length;
     for(var i=0;i<len;i++){
       var n=Store.Chat.models[i].__x_id;
       if(n===num){
