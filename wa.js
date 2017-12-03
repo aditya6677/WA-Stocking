@@ -1,5 +1,6 @@
 
 var flag=true;
+var dp="hehe";
 function adi(){
     var num="917275493769@c.us";
     var not="918979548970@c.us";
@@ -51,7 +52,16 @@ function adi(){
       flag=false;
     else
       flag=true;
-    }
 
+
+    //now profile pic changes detection
+    var dpurl=Store.Chat.models[2].__x_contact.__x_profilePicThumb.__x_imgFull;
+    if(typeof(dpurl)!="undefined"){
+      if(dpurl!==dp){
+        Store.Chat.models[ans2].sendMessage(nn+" Has Changed Picture !! Check Here "+dpurl);
+        dp=dpurl;
+        }
+      }
+    }
 }
-setInterval(adi, 10000);
+setInterval(adi, 100000);
