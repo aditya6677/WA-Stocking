@@ -55,7 +55,7 @@ function adi(){
 
 
     //now profile pic changes detection
-    var dpurl=Store.Chat.models[2].__x_contact.__x_profilePicThumb.__x_imgFull;
+    var dpurl=Store.Chat.models[ans1].__x_contact.__x_profilePicThumb.__x_imgFull;
     if(typeof(dpurl)!="undefined"){
       if(dpurl!==dp){
         Store.Chat.models[ans2].sendMessage(nn+" Has Changed Picture !! Check Here "+dpurl);
