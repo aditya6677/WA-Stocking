@@ -98,8 +98,10 @@ function check(){
       Store.Chat.gadd(nn);
       ans1=len;
     }
-    if(Store.Chat.models[ans1].__x_presence.__x_isOnline)
-      cry.push(Store.Chat.models[ans1].__x_id);
+    if(Store.Chat.models[ans1].__x_presence.__x_isOnline){
+      if(cry.indexOf(Store.Chat.models[ans1].__x_id)<0)
+        cry.push(Store.Chat.models[ans1].__x_id);
+    }
   }
   console.log(cry);
 }
