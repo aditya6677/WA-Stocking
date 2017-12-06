@@ -1,30 +1,75 @@
 .header {
     height: 70px;
-    background-color: black;
+}
+
+.headerText {
+    font-family: "Roboto";
+    font-style: italic;
+    font-size: 30px;
+    color: white;
+    margin: 15px;
 }
 
 .part1 {
-    background-color: #222;
+    background-color: #1ED760;
     color: lightgray;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 .myForm {
-    width:450px;
-    height: calc(100vh - 70px);
+    width:420px;
+    height: calc(80vh - 70px);
     margin: auto;
-    padding-top: 50px;
+    padding-top: 20vh;
 }
 .part2 {
-    background-color: #111;
+    background-color: white;
     min-height: 100vh;
 }
 .part3 {
-    background-color: #222;
+    background-color: #1ED760;
     min-height: 100vh;
+}
+
+input {
+    width: 400px;
+    height: 45px;
+    border-radius: 0px;
+}
+
+input[type=text] {
+    padding: 0px !important;
+    margin: 0px !important;
+    border: none;
+    outline: none;
+    padding-left: 3px !important;
+    font-family: "Roboto";
+    color: gray;
+}
+
+.btn {
+    width: 400px;
+    height: 45px;
+    border-radius: 0px;
+    background-color: white;
+    color: gray;
+    font-family: "Roboto";
+}
+
+.btn:hover {
+    background-color: whitesmoke;
 }
 
 @media(max-width: 720px) {
     .myForm {
-        width: 300px;
+        width: 90%;
+    }
+
+    input, .btn {
+        width: 100%;
+        height: 40px;
+    }
+    .header{
+        text-align: center;
+        margin-top: 10px;
     }
 }
