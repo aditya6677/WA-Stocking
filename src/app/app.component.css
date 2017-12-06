@@ -1,0 +1,30 @@
+.header {
+    height: 70px;
+    background-color: black;
+}
+
+.part1 {
+    background-color: #222;
+    color: lightgray;
+    min-height: 100vh;
+}
+.myForm {
+    width:450px;
+    height: calc(100vh - 70px);
+    margin: auto;
+    padding-top: 50px;
+}
+.part2 {
+    background-color: #111;
+    min-height: 100vh;
+}
+.part3 {
+    background-color: #222;
+    min-height: 100vh;
+}
+
+@media(max-width: 720px) {
+    .myForm {
+        width: 300px;
+    }
+}
