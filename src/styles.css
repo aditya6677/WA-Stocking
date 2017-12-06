@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+html {
+    overflow-x:hidden;
+    background-color: lightgray;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+.elementToFadeIn {
+    -webkit-animation: fadeinout .6s linear forwards;
+    animation: fadeinout .6s linear forwards;
+}
+@-webkit-keyframes fadeinout {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeinout {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.gutter-0.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+.gutter-0 > [class^="col-"]{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+::selection {
+    background-color: black;
+    color: white;
+}
+
