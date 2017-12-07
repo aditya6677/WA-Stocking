@@ -1,22 +1,62 @@
 <div class="row gutter-0 part1">
-    <div class="header">
-        <span class="headerText">
+  <div class="header">
+    <span class="headerText">
         whatsapp stalker
         </span>
-    </div>
+  </div>
   <div class="myForm">
     <form>
       <div class="form-group">
-        <input type="text" class="form-control" name="notify" required placeholder="Enter the notification number..." ngModel>
+        <input type="text" class="form-control" name="notify" required placeholder="enter the notification number..." title="your number"
+          ngModel>
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" name="stalk" required placeholder="Enter the number to stalk..." ngModel>
+        <input type="text" class="form-control" name="stalk" required placeholder="enter the number to stalk..." title="number to stalk"
+          ngModel>
       </div>
-      <button type="submit" class="btn">Monitor</button>
+
+
+      <div class="checkbox checkbox-info checkbox-circle">
+        <input id="checkbox1" type="checkbox" checked="">
+        <label for="checkbox1">
+                &nbsp;online/offline
+            </label>
+      </div>
+
+
+      <div class="checkbox checkbox-info checkbox-circle">
+        <input id="checkbox2" type="checkbox" checked="">
+        <label for="checkbox2">
+                &nbsp;profile pic change
+                </label>
+      </div>
+
+
+      <div class="checkbox checkbox-info checkbox-circle">
+        <input id="checkbox3" type="checkbox" checked="">
+        <label for="checkbox3">
+                &nbsp;status change *
+                    </label>
+      </div>
+
+
+      <div class="checkbox checkbox-info checkbox-circle">
+        <input id="checkbox4" type="checkbox" checked="">
+        <label for="checkbox4">
+                &nbsp;last hour activity
+                        </label>
+      </div>
+
+
+
+      <button type="submit" class="btn">monitor</button>
     </form>
   </div>
 </div>
 <div class="row gutter-0 part2">
+  <div class="container info">
+    info
+  </div>
 </div>
 <div class="row gutter-0 part3">
   <div class="container">

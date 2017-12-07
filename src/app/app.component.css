@@ -1,75 +1,235 @@
 .header {
-    height: 70px;
+  height: 70px;
 }
 
 .headerText {
-    font-family: "Roboto";
-    font-style: italic;
-    font-size: 30px;
-    color: white;
-    margin: 15px;
+  font-family: "Lobster", cursive;
+  font-style: italic;
+  font-size: 40px;
+  color: white;
+  margin: 20px;
+}
+
+.info {
+  font-family: "Lobster";
+  font-size: 30px;
+  color: gray;
+  margin: 20px;
 }
 
 .part1 {
-    background-color: #1ED760;
-    color: lightgray;
-    min-height: 80vh;
+  background-color: #1ED760;
+  color: lightgray;
+  min-height: 85vh;
 }
+
 .myForm {
-    width:420px;
-    height: calc(80vh - 70px);
-    margin: auto;
-    padding-top: 20vh;
+  width: 420px;
+  min-height: calc(85vh - 70px);
+  margin: auto;
+  padding-top: 17vh;
+  margin-bottom: 15px;
 }
+
 .part2 {
-    background-color: white;
-    min-height: 100vh;
+  background-color: white;
+  min-height: 100vh;
 }
+
 .part3 {
-    background-color: #1ED760;
-    min-height: 100vh;
+  background-color: #1ED760;
+  min-height: 100vh;
 }
 
 input {
-    width: 400px;
-    height: 45px;
-    border-radius: 0px;
+  width: 400px;
+  height: 45px;
+  border-radius: 20px;
 }
 
 input[type=text] {
-    padding: 0px !important;
-    margin: 0px !important;
-    border: none;
-    outline: none;
-    padding-left: 3px !important;
-    font-family: "Roboto";
-    color: gray;
+  padding: 0px !important;
+  margin: 0px !important;
+  border: none;
+  outline: none;
+  font-family: "Lobster";
+  color: gray;
+  border: 2px solid lightgray;
+  text-align: center;
+  font-size: 15px;
 }
 
 .btn {
-    width: 400px;
-    height: 45px;
-    border-radius: 0px;
-    background-color: white;
-    color: gray;
-    font-family: "Roboto";
+  width: 400px;
+  height: 45px;
+  border-radius: 20px;
+  background-color: white;
+  color: gray;
+  font-family: "Lobster";
+  font-size: 15px;
 }
 
 .btn:hover {
-    background-color: whitesmoke;
+  background-color: whitesmoke;
 }
 
 @media(max-width: 720px) {
-    .myForm {
-        width: 90%;
-    }
+  .myForm {
+    width: 90%;
+  }
+  input,
+  .btn {
+    width: 100%;
+    height: 40px;
+  }
+  .header,
+  .info {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
 
-    input, .btn {
-        width: 100%;
-        height: 40px;
-    }
-    .header{
-        text-align: center;
-        margin-top: 10px;
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.checkbox {
+    margin-left: 40px;
+    font-family: "Lobster";
+    font-size: 17px;
+    color: white;
+    padding: 5px;
+}
+
+.checkbox label {
+  display: inline-block;
+  position: relative;
+  padding-left: 5px;
+}
+
+.checkbox label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 0;
+  margin-left: -20px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.checkbox label::after {
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  top: 0;
+  margin-left: -20px;
+  padding-left: 3px;
+  padding-top: 1px;
+  font-size: 15px;
+  color: #555555;
+}
+
+.checkbox input[type="checkbox"] {
+  opacity: 0;
+}
+
+.checkbox input[type="checkbox"]:focus+label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.checkbox input[type="checkbox"]:checked+label::after {
+  font-family: 'FontAwesome';
+  content: "\f00c";
+}
+
+.checkbox input[type="checkbox"]:disabled+label {
+  opacity: 0.65;
+}
+
+.checkbox input[type="checkbox"]:disabled+label::before {
+  background-color: #eeeeee;
+  cursor: not-allowed;
+}
+
+.checkbox.checkbox-circle label::before {
+  border-radius: 50%;
+}
+
+.checkbox.checkbox-inline {
+  margin-top: 0;
+}
+
+.checkbox-primary input[type="checkbox"]:checked+label::before {
+  background-color: white;
+  border-color: white;
+}
+
+.checkbox-primary input[type="checkbox"]:checked+label::after {
+  color: #4DC85C;
+}
+
+.checkbox-danger input[type="checkbox"]:checked+label::before {
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+.checkbox-danger input[type="checkbox"]:checked+label::after {
+  color: #4DC85C;
+}
+
+.checkbox-info input[type="checkbox"]:checked+label::before {
+  background-color: white;
+  border-color: white;
+}
+
+.checkbox-info input[type="checkbox"]:checked+label::after {
+  color: #4DC85C;
+}
+
+.checkbox-warning input[type="checkbox"]:checked+label::before {
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+
+.checkbox-warning input[type="checkbox"]:checked+label::after {
+  color: #4DC85C;
+}
+
+.checkbox-success input[type="checkbox"]:checked+label::before {
+  background-color: white;
+  border-color: white;
+}
+
+.checkbox-success input[type="checkbox"]:checked+label::after {
+  color: #4DC85C;
 }
