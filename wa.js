@@ -5,7 +5,6 @@ var num="917275493769@c.us";
 var not="918979548970@c.us";
 var text = '{ "arr":[{"stock" :"'+num+'","notify":"'+not+'"}]}'; //json url
 var obj = JSON.parse(text);
-var len;
 
 //TODO JSON Update Function
 
