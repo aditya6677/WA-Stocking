@@ -33,12 +33,12 @@
 
 .part2 {
   background-color: white;
-  min-height: 100vh;
+  min-height: 60vh;
 }
 
 .part3 {
   background-color: #1ED760;
-  min-height: 100vh;
+  min-height: 20vh;
 }
 
 input {

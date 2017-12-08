@@ -7,16 +7,16 @@
   <div class="myForm">
     <form>
       <div class="form-group">
-        <input type="text" class="form-control" name="notify" required placeholder="enter the notification number..." title="your number"
-          ngModel>
+        <input type="text" class="form-control" name="notify" [(ngModel)]="notify" required placeholder="enter the notification number..."
+          title="your number">
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" name="stalk" required placeholder="enter the number to stalk..." title="number to stalk"
-          ngModel>
+        <input type="text" class="form-control" name="stalk" [(ngModel)]="stalk" required placeholder="enter the number to stalk..."
+          title="number to stalk">
       </div>
 
 
-      <div class="checkbox checkbox-info checkbox-circle">
+      <div class="checkbox checkbox-info checkbox-circle" (click)="checkbox1_onClick()" >
         <input id="checkbox1" type="checkbox" checked="">
         <label for="checkbox1">
                 &nbsp;online/offline
@@ -24,7 +24,7 @@
       </div>
 
 
-      <div class="checkbox checkbox-info checkbox-circle">
+      <div class="checkbox checkbox-info checkbox-circle" (click)="checkbox2_onClick()" >
         <input id="checkbox2" type="checkbox" checked="">
         <label for="checkbox2">
                 &nbsp;profile pic change
@@ -32,7 +32,7 @@
       </div>
 
 
-      <div class="checkbox checkbox-info checkbox-circle">
+      <div class="checkbox checkbox-info checkbox-circle" (click)="checkbox3_onClick()" >
         <input id="checkbox3" type="checkbox" checked="">
         <label for="checkbox3">
                 &nbsp;status change *
@@ -40,7 +40,7 @@
       </div>
 
 
-      <div class="checkbox checkbox-info checkbox-circle">
+      <div class="checkbox checkbox-info checkbox-circle" (click)="checkbox4_onClick()" >
         <input id="checkbox4" type="checkbox" checked="">
         <label for="checkbox4">
                 &nbsp;last hour activity
@@ -49,7 +49,7 @@
 
 
 
-      <button type="submit" class="btn">monitor</button>
+      <button type="submit" class="btn" (click)="monitor(notify, stalk, check1, check2, check3, check4)">monitor</button>
     </form>
   </div>
 </div>
