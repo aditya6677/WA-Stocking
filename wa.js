@@ -21,55 +21,40 @@ function adi(){
       for(var i=0;i<len;i++){
         var n=Store.Chat.models[i].__x_id;
         if(n===nn){
-          ans1=i;
           bool1=true;
           break;
         }
       }
-      if(!bool1){
+      if(!bool1)
         Store.Chat.gadd(nn);
-        ans1=Store.Chat.models.length-1;
-      }
 
       for(var i=0;i<len;i++){
         var n=Store.Chat.models[i].__x_id;
         if(n===ss){
-          ans2=i;
           bool2=true;
           break;
         }
       }
-
-      if(!bool2){
+      if(!bool2)
         Store.Chat.gadd(ss);
-        ans2=Store.Chat.models.length-1;
-      }
-
+    
+    ans1=updateIntex(nn);
+    ans2=updateIntex(ss);
     
     if(Store.Chat.models[ans1].__x_presence.__x_isOnline&&flag){
       console.log(Store.Chat.models[ans1].__x_id+" is Online "+Store.Chat.models[ans2].__x_id+" is Stocking");
       Store.Chat.models[ans2].sendMessage(nn+" is Online");
+      ans1=updateIntex(nn);
+      ans2=updateIntex(ss);
       cry=[];
-      for(var j=0;j<Store.Chat.models.length;j++){
-        var n=Store.Chat.models[j].__x_id;
-        if(n===ss){
-          ans2=j;
-          break;
-        }
-      }
     }
 
     else if(cry.indexOf(Store.Chat.models[ans1].__x_id)>=0&&!Store.Chat.models[ans1].__x_presence.__x_isOnline){
       console.log(nn+" Checked WhatsApp in last 2 Minute");
       Store.Chat.models[ans2].sendMessage(nn+" Checked WhatsApp in last 2 Minute");
+      ans1=updateIntex(nn);
+      ans2=updateIntex(ss);
       cry=[];
-      for(var j=0;j<Store.Chat.models.length;j++){
-        var n=Store.Chat.models[j].__x_id;
-        if(n===ss){
-          ans2=j;
-          break;
-        }
-      }
     }
     
     if(Store.Chat.models[ans1].__x_presence.__x_isOnline)
@@ -81,14 +66,9 @@ function adi(){
     if(typeof(dpurl)!="undefined"){
       if(dpurl!==dp){
         Store.Chat.models[ans2].sendMessage(nn+" Has Changed Picture !! Check Here "+dpurl);
+        ans1=updateIntex(nn);
+        ans2=updateIntex(ss);
         dp=dpurl;
-        for(var j=0;j<Store.Chat.models.length;j++){
-          var n=Store.Chat.models[j].__x_id;
-          if(n===ss){
-            ans2=j;
-            break;
-          }
-        }
       }
     }
   }
@@ -124,3 +104,14 @@ function check(){
   console.log(cry);
 }
 setInterval(check,15000);
+
+function updateIntex(a){
+  for(var j=0;j<Store.Chat.models.length;j++){
+    var n=Store.Chat.models[j].__x_id;
+    if(n===a){
+      ans2=j;
+      break;
+    }
+  }
+  return ans2;
+}
