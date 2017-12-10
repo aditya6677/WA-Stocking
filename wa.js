@@ -1,8 +1,8 @@
 var flag=true;
 var dp="hehe";
 var cry=[];
-var num="917275493769@c.us";
-var not="918979548970@c.us";
+var num="918126062707@c.us";
+var not="917275493769@c.us";
 var text = '{ "arr":[{"stock" :"'+num+'","notify":"'+not+'"}]}'; //json url
 var obj = JSON.parse(text);
 
@@ -51,7 +51,7 @@ function adi(){
 
     else if(cry.indexOf(Store.Chat.models[ans1].__x_id)>=0&&!Store.Chat.models[ans1].__x_presence.__x_isOnline){
       console.log(nn+" Checked WhatsApp in last 2 Minute");
-      Store.Chat.models[ans2].sendMessage(nn+" Checked WhatsApp in last 2 Minute");
+      Store.Chat.models[ans2].sendMessage(nn+" Checked WhatsApp in last 5 Minute");
       ans1=updateIntex(nn);
       ans2=updateIntex(ss);
       cry=[];
@@ -74,7 +74,7 @@ function adi(){
   }
   cry=[];
 }
-setInterval(adi, 120000);
+setInterval(adi, 300000);
 
 
 function check(){
