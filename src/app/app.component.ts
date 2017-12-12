@@ -19,21 +19,13 @@ export class AppComponent implements OnInit {
         
     }
 
-    checkbox1_onClick() {
-        this.check1 = !this.check1;
-    }
-    checkbox2_onClick() {
-        this.check2 = !this.check2;
-    }
-    checkbox3_onClick() {
-        this.check3 = !this.check3;
-    }
-    checkbox4_onClick() {
-        this.check4 = !this.check4;
+    checkForChanges() {
+        return [ this.check1, this.check2, this.check3, this.check4 ];
     }
 
     monitor(junk1, junk2) {
-        console.log({ junk1, junk2});
+        let junkAry = this.checkForChanges();
+        console.log({ junk1, junk2, junkAry });
     }
 
 

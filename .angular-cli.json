@@ -22,7 +22,8 @@
         "styles.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/roboto-fontface/css/roboto/roboto-fontface.css", 
-        "../node_modules/font-awesome/css/font-awesome.css"
+        "../node_modules/font-awesome/css/font-awesome.css",
+        "../node_modules/pretty-checkbox/dist/pretty-checkbox.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
