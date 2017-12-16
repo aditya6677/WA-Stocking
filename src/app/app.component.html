@@ -19,10 +19,10 @@
         <div class="col-xs-10 checkboxOption">
             online/offline
         </div>
-        <div class="col-xs-2 pull-right">
+        <div class="col-xs-2 pull-right check1">
           <div class="pretty p-switch p-fill">
-            <input type="checkbox" />
-            <div class="state">
+            <input type="checkbox"/>
+            <div class="state" (clickOutside)="check1 = !check1" [exclude]="'button, .check2, .check3, .check4'">
                 <label></label>
             </div>
           </div>
@@ -32,10 +32,10 @@
         <div class="col-xs-10 checkboxOption">
             status change
         </div>
-        <div class="col-xs-2 pull-right">
+        <div class="col-xs-2 pull-right check2">
           <div class="pretty p-switch p-fill">
             <input type="checkbox" />
-            <div class="state">
+            <div class="state"  (clickOutside)="check2 = !check2" [exclude]="'button, .check1, .check3, .check4'">
                 <label></label>
             </div>
           </div>
@@ -45,10 +45,10 @@
         <div class="col-xs-10 checkboxOption">
             profile pic change
         </div>
-        <div class="col-xs-2 pull-right">
+        <div class="col-xs-2 pull-right check3">
           <div class="pretty p-switch p-fill">
             <input type="checkbox" />
-            <div class="state">
+            <div class="state"  (clickOutside)="check3 = !check3" [exclude]="'button, .check1, .check2, .check4'">
                 <label></label>
             </div>
           </div>
@@ -58,17 +58,17 @@
         <div class="col-xs-10 checkboxOption">
             last hour activity
         </div>
-        <div class="col-xs-2 pull-right">
+        <div class="col-xs-2 pull-right check4">
           <div class="pretty p-switch p-fill">
-            <input type="checkbox" />
-            <div class="state">
+            <input type="checkbox"/>
+            <div class="state"  (clickOutside)="check4 = !check4" [exclude]="'button, .check1, .check2, .check3'">
                 <label></label>
             </div>
           </div>
         </div>
       </div>
 
-      <button type="submit" class="btn" (click)="monitor(notify, stalk)">monitor</button>
+      <button type="submit" class="btn monitorBtn" (click)="monitor(notify, stalk)">monitor</button>
     </form>
   </div>
 </div>

@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
 
     monitor(junk1, junk2) {
         let junkAry = this.checkForChanges();
-        console.log({ junk1, junk2, junkAry });
+        console.log(junk1, junk2, this.check1, this.check2, this.check3, this.check4);
     }
 
 

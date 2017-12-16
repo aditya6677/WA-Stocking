@@ -76,7 +76,11 @@ input[type=text] {
     font-family: "Lobster";
     color: #fff;
     font-size: 17px;
-    padding: 5px;
+    padding-bottom: 10px;
+}
+
+.monitorBtn {
+    margin-top: 10px;
 }
 
 @media(max-width: 720px) {
