@@ -10,10 +10,10 @@ export class AppComponent implements OnInit {
     title = 'app';
     notify: number;
     stalk: number;
-    check1: boolean = true;
-    check2: boolean = true;
-    check3: boolean = true;
-    check4: boolean = true;
+    check1: boolean = false;
+    check2: boolean = false;
+    check3: boolean = false;
+    check4: boolean = false;
 
     public constructor() {
         
@@ -25,7 +25,9 @@ export class AppComponent implements OnInit {
 
     monitor(junk1, junk2) {
         let junkAry = this.checkForChanges();
-        console.log(junk1, junk2, this.check1, this.check2, this.check3, this.check4);
+        junkAry.unshift(junk2);
+        junkAry.unshift(junk1);
+        console.log(junkAry);
     }
 
 
